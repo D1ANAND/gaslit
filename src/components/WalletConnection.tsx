@@ -21,7 +21,7 @@ const WalletConnection: React.FC<WalletConnectionProps> = ({ walletAddress, onCo
           <div className="bg-orange-100 p-2 rounded-lg">
             <Wallet className="w-6 h-6 text-orange-600" />
           </div>
-          <h1 className="text-xl font-semibold text-gray-800">Base Sepolia DApp</h1>
+          <h1 className="text-xl font-semibold text-gray-800">dApp</h1>
         </div>
         <a 
           href="https://sepolia.basescan.org" 
@@ -55,7 +55,7 @@ const WalletConnection: React.FC<WalletConnectionProps> = ({ walletAddress, onCo
       {!walletAddress && (
         <Alert className="mt-4">
           <AlertDescription>
-            Connect your wallet to interact with the Base Sepolia testnet.
+            Connect your wallet .
           </AlertDescription>
         </Alert>
       )}

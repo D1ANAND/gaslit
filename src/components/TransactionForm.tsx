@@ -12,7 +12,7 @@ const TransactionForm: React.FC<TransactionFormProps> = ({
   isProcessing,
   onSubmit,
 }) => {
-  const [amount, setAmount] = useState('0.001');
+  const [amount, setAmount] = useState('');
 
   return (
     <div className="bg-white rounded-xl p-6 shadow-xl">
@@ -20,7 +20,7 @@ const TransactionForm: React.FC<TransactionFormProps> = ({
         <div className="bg-blue-100 p-2 rounded-lg">
           <Send className="w-6 h-6 text-blue-600" />
         </div>
-        <h2 className="text-xl font-semibold text-gray-800">Send Transaction</h2>
+        <h2 className="text-xl font-semibold text-gray-800">Send Prompt</h2>
       </div>
 
       <div className="space-y-4">
@@ -28,22 +28,13 @@ const TransactionForm: React.FC<TransactionFormProps> = ({
           <div className="relative flex-grow">
             <input
               id="amount"
-              type="number"
+              type="text"
               value={amount}
               onChange={(e) => setAmount(e.target.value)}
               className="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-all"
               placeholder="Enter a prompt..."
             />
           </div>
-
-          <button
-            onClick={() => console.log("Send button clicked!")}
-            disabled={isDisabled || isProcessing}
-            className="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 disabled:from-gray-400 disabled:to-gray-500 text-white px-4 py-2 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg flex items-center gap-2"
-          >
-            <Send size={16} />
-            Send
-          </button>
         </div>
 
         <button

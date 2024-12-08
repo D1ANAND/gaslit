@@ -149,10 +149,10 @@ export default function Home() {
       <div className="max-w-3xl mx-auto p-4 sm:p-6 space-y-6">
         <header className="text-center py-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-2">
-            Lit Protocol Integration
+           GASLIT 
           </h1>
           <p className="text-gray-600">
-            Interact with Base Sepolia testnet using Lit Protocol
+           Make Every Transaction gasless
           </p>
         </header>
 
@@ -164,9 +164,6 @@ export default function Home() {
         />
         <ConsoleOutput logs={logs} />
 
-        <footer className="text-center text-sm text-gray-500 py-8">
-          <p>Built with Next.js, Ethers.js, and Lit Protocol</p>
-        </footer>
       </div>
     </div>
   );
